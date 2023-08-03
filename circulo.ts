@@ -32,7 +32,7 @@ public calcularAreaCirculo(): number {
 let circulo1: Circulo = new Circulo (5)
 
 
-console.log("Área del círculo:", circulo1.calcularAreaCirculo() );
+//console.log("Área del círculo:", circulo1.calcularAreaCirculo() );
 
-console.log("Perímetro del círculo:",circulo1.calcularPerimetroCirculo());
+//console.log("Perímetro del círculo:",circulo1.calcularPerimetroCirculo());
 
