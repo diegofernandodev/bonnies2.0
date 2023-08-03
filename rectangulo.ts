@@ -22,7 +22,7 @@ export class Rectangulo {
         return this.base * this.altura
 }
     
-    public calcularPerimetron(){  
+    public calcularPerimetro(){  
         return 2*(this.base + this.altura)
 }
 }
