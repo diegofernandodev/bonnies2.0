@@ -1,0 +1,5 @@
+class Circulo {
+    constructor(parameters) {
+        
+    }
+}

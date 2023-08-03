@@ -1,0 +1,5 @@
+class Rectangulo {
+    constructor(parameters) {
+        
+    }
+}
