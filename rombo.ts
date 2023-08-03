@@ -29,6 +29,10 @@ calcularPerimetro(): number {
     );
     return lado * 4;
 }
+public obtenerPerimetroConDosDecimales(): string {
+    const perimetro = this.calcularPerimetro();
+    return perimetro.toFixed(2);
+}
 }
 
 

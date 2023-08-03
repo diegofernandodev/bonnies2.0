@@ -27,9 +27,9 @@ export class Cuadrado {
 }
 
 
-let cuadrado1:Cuadrado = new Cuadrado(5)
-console.log("el area de cuadrado es:", cuadrado1.calculararea());
-console.log("el perimetro del cuadrado es:", cuadrado1.calcularperimetro());
+//let cuadrado1:Cuadrado = new Cuadrado(5)
+//console.log("el area de cuadrado es:", cuadrado1.calculararea());
+//console.log("el perimetro del cuadrado es:", cuadrado1.calcularperimetro());
 
 //cuadrado1.mostrardatos()
 

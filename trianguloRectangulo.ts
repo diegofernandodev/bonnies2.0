@@ -1,31 +1,45 @@
-export class trianguloRectangulo {
-    private base:number
-    private altura:number
-    constructor(base:number, altura:number) {
-        this.base = base
-        this.altura = altura
+import { Rectangulo } from "./rectangulo";
+
+export class TrianguloRectangulo extends Rectangulo {
+   
+    constructor(base: number, altura: number) {
+        super(base,altura)
     }
-    public calcularArea():number {
-        return (this.base * this.altura) /2
-}
-public calcularPerimetro():number {
-   const hipotenusa = Math.sqrt(this.base ** 2 + this.altura ** 2);
-   const perimetro = this.base + this.altura + hipotenusa;
-   return perimetro;
-}
-public setBase(base:number):void {
-    this.base = base
-}
-public setAltura(altura:number):void {
-    this.altura = altura
-}
-public getBase():number {
-    return this.base
-}
-public getAltura():number {
-    return this.altura
-}
+
+    public calcularArea(): number {
+        return (this.getBase() * this.getAltura()) / 2;
+    }
+
+    public calcularPerimetro(): number {
+        const hipotenusa = this.calcularHipotenusa();
+        const perimetro = this.getBase() + this.getAltura() + hipotenusa;
+        return perimetro;
+    }
+    public obtenerPerimetroConDosDecimales(): string {
+        const perimetro = this.calcularPerimetro();
+        return perimetro.toFixed(2);
+    }
+
+    public calcularHipotenusa(): number {
+        return Math.sqrt(this.getBase() ** 2 + this.getAltura() ** 2);
+    }
+
+    public obtenerHipotenusaConDosDecimales(): string {
+        const Hipotenusa = this.calcularHipotenusa();
+        return Hipotenusa.toFixed(2);
+    }
+
+    public determinarTipoTriangulo(): string {
+        const hipotenusa = this.calcularHipotenusa();
+
+        if (this.getBase() === this.getAltura() && this.getBase() === hipotenusa) {
+            return "Triángulo equilátero (todos los lados iguales)";
+        } else if (this.getBase() === this.getAltura() || this.getBase() === hipotenusa || this.getAltura() === hipotenusa) {
+            return "Triángulo isósceles (dos lados iguales)";
+        } else {
+            return "Triángulo escaleno (todos los lados diferentes)";
+        }
+    }
 }
 
-let trianguloRectangulo1 = new trianguloRectangulo(10,20)
-console.log(trianguloRectangulo1.calcularArea(),trianguloRectangulo1.calcularPerimetro());
+
