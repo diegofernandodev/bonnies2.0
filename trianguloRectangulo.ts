@@ -1,4 +1,4 @@
-class trianguloRectangulo {
+export class trianguloRectangulo {
     private base:number
     private altura:number
     constructor(base:number, altura:number) {

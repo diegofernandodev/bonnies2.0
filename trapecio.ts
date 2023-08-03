@@ -1,4 +1,4 @@
-class Trapecio {
+export class Trapecio {
     private baseMayor:number
     private baseMenor:number
     private alturaMayor:number
